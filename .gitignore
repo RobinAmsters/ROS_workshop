@@ -1,5 +1,6 @@
 
 .ipynb_checkpoints/*
+tutorials/.ipynb_checkpoints/*
 
 # Git Ignore for ROS
 
