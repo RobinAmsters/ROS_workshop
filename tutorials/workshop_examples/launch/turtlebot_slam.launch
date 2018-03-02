@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+
+<include file="$(find turtlebot3_slam)/launch/turtlebot3_slam.launch"/>
+<include file="$(find turtlebot3_teleop)/launch/turtlebot3_teleop_key.launch"/>
+
+<node name="rviz" pkg="rviz" type="rviz" args="-d $(find turtlebot3_slam)/rviz/turtlebot3_slam.rviz" />
+
+<node pkg="rosbag" type="record" name="rosbag_record" if="$(eval record==True)" args="-a -o /home/robin/Documents/ROS_workshop/bag/"/>
+
+</launch
