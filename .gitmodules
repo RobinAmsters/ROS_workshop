@@ -1,3 +1,0 @@
-[submodule "ros_ws"]
-	path = ros_ws
-	url = https://github.com/RobinAmsters/ros_ws
