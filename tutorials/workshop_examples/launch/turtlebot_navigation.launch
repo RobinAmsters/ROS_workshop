@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+
+<include file="$(find turtlebot3_navigation)/launch/turtlebot3_navigation.launch" >
+<arg name="map_file" value="$(env HOME)/ROS_workshop/data/map.yaml"/>
+</include>
+<!---->
+<param name="move_base/global_costmap/transform_tolerance" value="1000"/>
+<param name="move_base/local_costmap/transform_tolerance" value="1000"/>
+
+<node name="rviz" pkg="rviz" type="rviz" args="-d $(find turtlebot3_navigation)/rviz/turtlebot3_nav.rviz" />
+
+</launch>
