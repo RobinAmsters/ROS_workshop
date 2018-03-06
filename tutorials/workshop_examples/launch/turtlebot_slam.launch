@@ -8,14 +8,14 @@
 <node name="rviz" pkg="rviz" type="rviz" args="-d $(find turtlebot3_slam)/rviz/turtlebot3_slam.rviz" />
 
 <group if="$(arg play)">
-  <node pkg="rosbag" type="play" name="rosbag_play" args="$HOME/ROS_workshop/data/$(arg bagfile) /cmd_vel:=/cmd_vel_dev_null"/>
+  <node pkg="rosbag" type="play" name="rosbag_play" args="$(env HOME)/ROS_workshop/data/$(arg bagfile) /cmd_vel:=/cmd_vel_dev_null"/>
   <arg name="use_sim_time" value="true"/>
 </group>
 
 <group if="$(arg record)">
   <include file="$(find turtlebot3_slam)/launch/turtlebot3_slam.launch"/>
   <include file="$(find turtlebot3_teleop)/launch/turtlebot3_teleop_key.launch"/>
-  <node pkg="rosbag" type="record" name="rosbag_record" args="-a -o $HOME/ROS_workshop/data/"/>
+  <node pkg="rosbag" type="record" name="rosbag_record" args="record -a -o $(env HOME)/ROS_workshop/data/"/>
   <arg name="use_sim_time" value="false"/>
 </group>
 
