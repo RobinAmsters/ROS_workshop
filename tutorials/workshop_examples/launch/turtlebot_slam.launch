@@ -1,11 +1,22 @@
 <?xml version="1.0"?>
 <launch>
 
-<include file="$(find turtlebot3_slam)/launch/turtlebot3_slam.launch"/>
-<include file="$(find turtlebot3_teleop)/launch/turtlebot3_teleop_key.launch"/>
+<arg name="record" default="False" doc="Record results in a bag file"/>
+<arg name="play" default="False" doc="Play recorded bag file"/>
+<arg name="bagfile" default="" doc="Play recorded bag file"/>
 
 <node name="rviz" pkg="rviz" type="rviz" args="-d $(find turtlebot3_slam)/rviz/turtlebot3_slam.rviz" />
 
-<node pkg="rosbag" type="record" name="rosbag_record" if="$(eval record==True)" args="-a -o /home/robin/Documents/ROS_workshop/bag/"/>
+<group if="$(arg play)">
+  <node pkg="rosbag" type="play" name="rosbag_play" args="$HOME/ROS_workshop/data/$(arg bagfile) /cmd_vel:=/cmd_vel_dev_null"/>
+  <arg name="use_sim_time" value="true"/>
+</group>
 
-</launch
+<group if="$(arg record)">
+  <include file="$(find turtlebot3_slam)/launch/turtlebot3_slam.launch"/>
+  <include file="$(find turtlebot3_teleop)/launch/turtlebot3_teleop_key.launch"/>
+  <node pkg="rosbag" type="record" name="rosbag_record" args="-a -o $HOME/ROS_workshop/data/"/>
+  <arg name="use_sim_time" value="false"/>
+</group>
+
+</launch>
