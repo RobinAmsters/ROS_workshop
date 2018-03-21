@@ -13,7 +13,7 @@ In this one-day workshop, we address some of the main topics needed for getting 
 
 ## Recommended reading
 
-Most of the information you'll need will be in the tutorials themselves. However, we recommend having a basic knowledge of Linux and terminal commands beforehand. Basic knowledge of the Python programming language is optional, but can be useful if you want to fully understand the source code of the ROS nodes.
+Most of the information you'll need will be in the tutorials themselves. However, we recommend having a basic knowledge of Linux and terminal commands beforehand. You can learn more about Linux on [our wiki](https://github.com/RobinAmsters/ROS_workshop/wiki/Linux-basics). Basic knowledge of the Python programming language is optional, but can be useful if you want to fully understand the source code of the ROS nodes.
 
 ## How to view the tutorials
 
