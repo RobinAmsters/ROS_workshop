@@ -2,18 +2,18 @@
 
 This repository contains teaching materials for an introductory workshop about the [Robotic Operating System (ROS)](http://www.ros.org/), which is organized as a dissemination activity for the TETRA project '[Ad Usum Navigantium](http://adusumnavigantium.groept.be/)' at the Catholic university of Leuven, Belgium.
 
-ROS is an open-source, meta-operating system used in robotics research and industry. It combines the efforts of developers around the world, so that others have to spend less time ’reinventing the wheel’. It provides functionality like hardware abstraction,localization, navigation, visualization and much more in a communication infrastructure that is easy to scale. The learning curve for ROS can be quite steep, which 
+ROS is an open-source, meta-operating system used in robotics research and industry. It combines the efforts of developers around the world, so that others have to spend less time ’reinventing the wheel’. It provides functionality like hardware abstraction,localization, navigation, visualization and much more in a communication infrastructure that is easy to scale. The learning curve for ROS can be quite steep, with existing tutorials often going too much in depth too soon. 
 
-In this one-day workshop, we address some of the main topics needed for getting started with the robotics operating system. Following this workshop, you should have a solid grasp of the core concepts of ROS. You'll be able to make your own packages, and learn how to use software developed by others. The workshop is divided into 4 main chapters:
+In this one-day workshop, we address some of the main topics needed for getting started with the robotic operating system. Following this workshop, you should have a solid grasp of the core concepts of ROS. You'll be able to make your own packages, and learn how to use software developed by others. However, this will not be a programming workshop. The code for the example programs will be provided in appendix for further reading. The focus of this workshop is more on interacting with the different parts of ROS.
 
 1. Introduction: a general introduction to what ROS is, what is can('t) be used for and how it compares to other similar tools.
-2. Hello world example: following the general introduction, we will dive right into how to develop software ROS by means of a  minimal working (or 'Hello world') example.
+2. [Hello world example](http://nbviewer.jupyter.org/github/robinamsters/ROS_workshop/blob/master/tutorials/1_Hello_ROS.ipynb): following the general introduction, we will dive right into how to develop software ROS by means of a  minimal working (or 'Hello world') example.
 3. Simulation: you don't always need a robot to develop the initial version of your programs. By using the [Gazebo physics simulator](http://gazebosim.org/), it becomes possible to simulate one or more robots in a simulated environment. This chapter helps you get started with Gazebo and Unified Robot Description Format (or URDF ) files.
 4. [Hands on with the Turtlebot 3](http://nbviewer.jupyter.org/github/robinamsters/ROS_workshop/blob/master/tutorials/3_Hands_on_with_TB3.ipynb): off course working with ROS is the most fun when you can run your programs on an actual robot. In this final part of the workshop you will gain some practical experience with the [Turtlebot 3](https://www.turtlebot.com/). Which is a low-cost, open source robot platform.
 
 ## Recommended reading
 
-Most of the information you'll need will be in the tutorials themselves. However, we recommend having a basic knowledge of Linux and terminal commands beforehand. You can learn more about Linux on [our wiki](https://github.com/RobinAmsters/ROS_workshop/wiki/Linux-basics). Basic knowledge of the Python programming language is optional, but can be useful if you want to fully understand the source code of the ROS nodes.
+Most of the information you'll need will be in the tutorials themselves. However, we highly recommend having a basic knowledge of Linux and terminal commands beforehand. You can learn more about Linux on [our wiki](https://github.com/RobinAmsters/ROS_workshop/wiki/Linux-basics). Basic knowledge of the Python programming language is optional, but can be useful if you want to fully understand the source code of the ROS nodes.
 
 ## How to view the tutorials
 
@@ -45,12 +45,10 @@ The tutorials are meant to be interactive, the best way to achieve this is to do
 
    To execute the code contained in these blocks you can either:
 
-      	1. Click on the cell such that a cursor appears inside it, and subsequently press Ctrl+Enter
-        2. Use the 'run cell' button in the notebook toolbar at the top of the window: ![](tutorials/images/notebook_toolbar.png)
+     1. Click on the cell such that a cursor appears inside it, and subsequently press Ctrl+Enter
+     2. Use the 'run cell' button in the notebook toolbar at the top of the window: ![](tutorials/images/notebook_toolbar.png)
 
    To stop the execution of a certain cell, use the 'interrupt kernel' button next to the 'run cell' button in the toolbar. Once caveat is that each jupyter notebook can only run 1 terminal command at a time. When executing and debugging ROS programs, you will often find yourself requiring more than one terminal. You can always open additional terminals, either in a new window with Ctrl+Alt+T, or in the same window as a new tab with Ctrl+Shift+T. Alternatively, if you want to keep everything in the same browser window, you can also open a terminal from jupyter by selecting new -> terminal from the notebook server tab (not the tab with the tutorial, rather the first one that opens in the browser when executing `jupyter notebook`) ![](tutorials/images/jupyter_terminal.png)
-
-   ​
 
 ## Further reading
 
