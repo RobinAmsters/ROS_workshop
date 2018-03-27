@@ -5,7 +5,7 @@
 <arg name="play" default="False" doc="Play recorded bag file"/>
 <arg name="bagfile" default="" doc="Play recorded bag file"/>
 
-<include file="$(find turtlebot3_slam)/launch/turtlebot3_slam.launch"/>
+<include file="$(find turtlebot3_bringup)/launch/turtlebot3_remote.launch"/>
 <include file="$(find turtlebot3_teleop)/launch/turtlebot3_teleop_key.launch"/>
 
 <node name="rviz" pkg="rviz" type="rviz" args="-d $(find turtlebot3_slam)/rviz/turtlebot3_slam.rviz" />
