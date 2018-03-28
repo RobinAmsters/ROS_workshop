@@ -5,16 +5,19 @@
 <arg name="play" default="False" doc="Play recorded bag file"/>
 <arg name="bagfile" default="" doc="Play recorded bag file"/>
 
-<include file="$(find turtlebot3_bringup)/launch/turtlebot3_remote.launch"/>
-<include file="$(find turtlebot3_teleop)/launch/turtlebot3_teleop_key.launch"/>
-
 <node name="rviz" pkg="rviz" type="rviz" args="-d $(find turtlebot3_slam)/rviz/turtlebot3_slam.rviz" />
+<param name="use_sim_time" value="false"/>
 
-<node name="tinySLAM" pkg="tiny_slam" type="tiny_slam"
+<group unless="$(arg play)">
+   <include file="$(find turtlebot3_bringup)/launch/turtlebot3_remote.launch"/>
+   <include file="$(find turtlebot3_teleop)/launch/turtlebot3_teleop_key.launch"/>
+
+    <node name="tinySLAM" pkg="tiny_slam" type="tiny_slam"
         cwd="node" required="true" output="screen"/>
 
-<node name="MapTrasformPublisher" pkg="tf" type="static_transform_publisher"
+    <node name="MapTransformPublisher" pkg="tf" type="static_transform_publisher"
         args="0 0 0 0 0 0 map odom 250" cwd="node" required="true"/>
+ </group>
 
 <group if="$(arg play)">
   <node pkg="rosbag" type="play" name="rosbag_play" args="$(env HOME)/ROS_workshop/data/$(arg bagfile) /cmd_vel:=/cmd_vel_dev_null"/>
@@ -23,7 +26,6 @@
 
 <group if="$(arg record)">
   <node pkg="rosbag" type="record" name="rosbag_record" args="record -a -o $(env HOME)/ROS_workshop/data/"/>
-  <param name="use_sim_time" value="false"/>
 </group>
 
 
