@@ -4,15 +4,10 @@
 <include file="$(find turtlebot3_navigation)/launch/turtlebot3_navigation.launch" >
 <arg name="map_file" value="$(env HOME)/ROS_workshop/data/map.yaml"/>
 </include>
-
-<node name="rviz" pkg="rviz" type="rviz" args="-d $(find turtlebot3_navigation)/rviz/turtlebot3_nav.rviz" />
 <!---->
 <param name="move_base/global_costmap/transform_tolerance" value="1000"/>
 <param name="move_base/local_costmap/transform_tolerance" value="1000"/>
-<param name="/move_base/DWAPlannerROS/max_rot_vel" value="0.9" /> 
-<param name="/move_base/DWAPlannerROS/xy_goal_tolerance" value="0.25"/> 
-<param name="/move_base/DWAPlannerROS/yaw_goal_tolerance" value="0.50"/> 
 
-
+<node name="rviz" pkg="rviz" type="rviz" args="-d $(find turtlebot3_navigation)/rviz/turtlebot3_nav.rviz" />
 
 </launch>
