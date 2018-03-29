@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Get current time since epoch
-DATE_PC=`date "+%s"`
+DATE_PC_orig=`date "+%s"`	+DATE_PC=`date "+%s"`
+DATE_PC="$(($DATE_PC_orig + 10))"
 
 # Convert to pi date locale
 DATE_PI=`ssh rosberrypi@192.168.42.1 date -d @$DATE_PC`
