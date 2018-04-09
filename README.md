@@ -57,3 +57,10 @@ Want to learn even more ? Below you will find some additional rescources:
 - A great book to get you started is [A gentle introduction to ROS by Jason M. O'Kane](https://www.cse.sc.edu/~jokane/agitr/). This book is freely available and a good choice if you are completely new to ROS. It uses the C++ programming language, but don't worry if you don't know the language when starting the book. 
 - The [ros wiki](http://wiki.ros.org/) contains a plethora of information on various topics. The [tf](http://wiki.ros.org/tf/Tutorials) and [URDF](http://wiki.ros.org/urdf/Tutorials) tutorials could be particularly interesting. 
 - To learn more about Gazebo, consider taking a look at the considerable list of [Gazebo tutorials.](http://gazebosim.org/tutorials)
+
+## Acknowledgements
+The code and tutorials in this repository were developped by:
+ - Peter Aerts
+ - Robin Amsters
+ - Ali Bin Junaid
+ - Samrat Roy
