@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Get current time since epoch
-DATE_PC_orig=`date "+%s"`	+DATE_PC=`date "+%s"`
+DATE_PC_orig=`date "+%s"`
 DATE_PC="$(($DATE_PC_orig + 10))"
 
 # Convert to pi date locale
